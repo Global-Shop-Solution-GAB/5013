@@ -1,0 +1,1664 @@
+Program.Sub.ScreenSU.Start
+Gui.F_ConceptosSAT..Create
+Gui.F_ConceptosSAT..Size(4245,2385)
+Gui.F_ConceptosSAT..MinX(0)
+Gui.F_ConceptosSAT..MinY(0)
+Gui.F_ConceptosSAT..Position(0,0)
+Gui.F_ConceptosSAT..BackColor(-2147483633)
+Gui.F_ConceptosSAT..MousePointer(0)
+Gui.F_ConceptosSAT..Caption("Clave Producto SAT")
+Gui.F_ConceptosSAT..Event(UnLoad,F_ConceptosSAT_UnLoad)
+Gui.F_ConceptosSAT.lblProdServ.Create(Label,"Clave Producto Servicio:",True,1950,420,0,795,570,True,0,"Arial",8,-2147483633,0)
+Gui.F_ConceptosSAT.cmdClaveProdServ.Create(Button)
+Gui.F_ConceptosSAT.cmdClaveProdServ.Size(375,375)
+Gui.F_ConceptosSAT.cmdClaveProdServ.Position(2835,495)
+Gui.F_ConceptosSAT.cmdClaveProdServ.Caption("^")
+Gui.F_ConceptosSAT.cmdClaveProdServ.DefaultValue("")
+Gui.F_ConceptosSAT.cmdClaveProdServ.Event(Click,cmd2_Click)
+Gui.F_ConceptosSAT.txtProdServ.Create(TextBox,"",True,1785,300,0,840,1020,True,0,"Arial",8,-2147483643,1)
+Gui.F_ConceptosSAT.txtProdServ.Locked(True)
+Gui.F_ConceptosSAT.txtProdServ.Event(Change,txtProdServ_Change)
+Gui.F_UM..Create
+Gui.F_UM..Caption("Unidad de Medida Catalogo SAT")
+Gui.F_UM..Size(8520,9345)
+Gui.F_UM..MinX(0)
+Gui.F_UM..MinY(0)
+Gui.F_UM..Position(0,0)
+Gui.F_UM..BackColor(-2147483633)
+Gui.F_UM..MousePointer(0)
+Gui.F_UM..Event(UnLoad,Unload)
+Gui.F_UM.GsGCUM.Create(GsGridControl)
+Gui.F_UM.GsGCUM.Size(7950,7980)
+Gui.F_UM.GsGCUM.Position(105,615)
+Gui.F_UM.GsGCUM.Event(RowCellClick,GsGCUM_CellClick)
+Gui.F_UM.lbl1.Create(Label,"Selecciona la opcion deseada de acuerdo con el catalogo de Clave Unidad del SAT",True,7695,480,0,210,180,True,0,"Arial",10,-2147483633,0)
+Gui.F_Direccion..Create
+Gui.F_Direccion..Size(4890,3930)
+Gui.F_Direccion..MinX(0)
+Gui.F_Direccion..MinY(0)
+Gui.F_Direccion..Position(0,0)
+Gui.F_Direccion..BackColor(-2147483633)
+Gui.F_Direccion..MousePointer(0)
+Gui.F_Direccion..Caption("Catalago Direccion")
+Gui.F_Direccion..Event(UnLoad,F_Direccion_UnLoad)
+Gui.F_Direccion.lblCP.Create(Label,"Codigo Postal",True,1470,255,0,225,1560,True,0,"Arial",8,-2147483633,0)
+Gui.F_Direccion.lblPais.Create(Label,"Pais",True,750,255,0,225,960,True,0,"Arial",8,-2147483633,0)
+Gui.F_Direccion.txtCP.Create(TextBox,"",True,1920,300,0,1950,1470,True,0,"Arial",8,-2147483643,1)
+Gui.F_Direccion.txtCP.Locked(True)
+Gui.F_Direccion.txtPais.Create(TextBox,"",True,1920,300,0,1950,870,True,0,"Arial",8,-2147483643,1)
+Gui.F_Direccion.txtPais.Locked(True)
+Gui.F_Direccion.txtPais.Event(Change,txtPais_Change)
+Gui.F_Direccion.cmdCPNat.Create(Button)
+Gui.F_Direccion.cmdCPNat.Size(405,375)
+Gui.F_Direccion.cmdCPNat.Position(4095,1440)
+Gui.F_Direccion.cmdCPNat.Caption("^")
+Gui.F_Direccion.cmdCPNat.Event(Click,cmdCodigoPostal_Click)
+Gui.F_Direccion.cmdPais.Create(Button)
+Gui.F_Direccion.cmdPais.Size(405,375)
+Gui.F_Direccion.cmdPais.Position(4095,840)
+Gui.F_Direccion.cmdPais.Caption("^")
+Gui.F_Direccion.cmdPais.Event(Click,cmdPais_Click)
+Gui.F_Direccion.cmdSaveNat.Create(Button)
+Gui.F_Direccion.cmdSaveNat.Size(4320,420)
+Gui.F_Direccion.cmdSaveNat.Position(225,2625)
+Gui.F_Direccion.cmdSaveNat.Caption("Guardar Direccion ")
+Gui.F_Direccion.cmdSaveNat.FontSize(10)
+Gui.F_Direccion.cmdSaveNat.Event(Click,cmdSave_Click)
+Gui.F_Direccion.lblEstadoCom.Create(Label,"Estado",True,855,255,0,225,2175,True,0,"Arial",8,-2147483633,0)
+Gui.F_Direccion.txtEstadoCom.Create(TextBox,"",True,1920,300,0,1950,2085,True,0,"Arial",8,-2147483643,1)
+Gui.F_Direccion.txtEstadoCom.MaxLength(3)
+Gui.F_Direccion.txtEstadoCom.Locked(True)
+Gui.F_Direccion.cmdEstadoCom.Create(Button)
+Gui.F_Direccion.cmdEstadoCom.Size(405,375)
+Gui.F_Direccion.cmdEstadoCom.Position(4095,2055)
+Gui.F_Direccion.cmdEstadoCom.Caption("^")
+Gui.F_Direccion.cmdEstadoCom.Event(Click,cmdEstado_Click)
+Gui.F_Direccion.chkComplemento.Create(CheckBox)
+Gui.F_Direccion.chkComplemento.Size(3555,360)
+Gui.F_Direccion.chkComplemento.Position(405,195)
+Gui.F_Direccion.chkComplemento.Event(Click,chkComplemento_Click)
+Gui.F_Direccion.chkComplemento.Caption("COMPLEMENTO EXTERIOR")
+Gui.F_LeyendaFiscal..Create
+Gui.F_LeyendaFiscal..Caption("Leyendas Fiscales")
+Gui.F_LeyendaFiscal..Size(8445,5400)
+Gui.F_LeyendaFiscal..MinX(0)
+Gui.F_LeyendaFiscal..MinY(0)
+Gui.F_LeyendaFiscal..Position(0,0)
+Gui.F_LeyendaFiscal..BackColor(-2147483633)
+Gui.F_LeyendaFiscal..MousePointer(0)
+Gui.F_LeyendaFiscal..Event(UnLoad,Unload)
+Gui.F_LeyendaFiscal.lblDispFisc.Create(Label,"Disposicion Fiscal",True,1935,255,0,630,1335,True,0,"Arial",8,-2147483633,0)
+Gui.F_LeyendaFiscal.lblNorma.Create(Label,"Norma",True,1935,255,0,630,1980,True,0,"Arial",8,-2147483633,1)
+Gui.F_LeyendaFiscal.lblTextoLeyenda.Create(Label,"Texto Leyenda",True,1935,255,0,630,2685,True,0,"Arial",8,-2147483633,0)
+Gui.F_LeyendaFiscal.txtNorma.Create(TextBox,"",True,4500,300,0,3045,1905,True,0,"Arial",8,-2147483643,1)
+Gui.F_LeyendaFiscal.txtDispFisc.Create(TextBox,"",True,4500,300,0,3045,1260,True,0,"Arial",8,-2147483643,1)
+Gui.F_LeyendaFiscal.cmdSaveLeyFisc.Create(Button)
+Gui.F_LeyendaFiscal.cmdSaveLeyFisc.Size(1995,495)
+Gui.F_LeyendaFiscal.cmdSaveLeyFisc.Position(5550,3645)
+Gui.F_LeyendaFiscal.cmdSaveLeyFisc.Caption("Guardar")
+Gui.F_LeyendaFiscal.cmdSaveLeyFisc.Event(Click,cmdSaveLeyFisc_Click)
+Gui.F_TipoRelacion..Create
+Gui.F_TipoRelacion..Caption("Multiples Tipo Relacion")
+Gui.F_TipoRelacion..Size(10260,7410)
+Gui.F_TipoRelacion..MinX(0)
+Gui.F_TipoRelacion..MinY(0)
+Gui.F_TipoRelacion..Position(0,0)
+Gui.F_TipoRelacion..BackColor(-2147483633)
+Gui.F_TipoRelacion..MousePointer(0)
+Gui.F_TipoRelacion..Event(UnLoad,Unload)
+Gui.F_TipoRelacion.cmdTRelacionYes.Create(Button)
+Gui.F_TipoRelacion.cmdTRelacionYes.Size(3285,705)
+Gui.F_TipoRelacion.cmdTRelacionYes.Position(870,6030)
+Gui.F_TipoRelacion.cmdTRelacionYes.Caption("Relacionar Otra Factura")
+Gui.F_TipoRelacion.cmdTRelacionYes.Event(Click,cmdTRelacionYes_Click)
+Gui.F_TipoRelacion.cmdTRelacionYes.FontSize(10)
+Gui.F_TipoRelacion.cmdTRelacionNO.Create(Button)
+Gui.F_TipoRelacion.cmdTRelacionNO.Size(1200,705)
+Gui.F_TipoRelacion.cmdTRelacionNO.Position(8400,6030)
+Gui.F_TipoRelacion.cmdTRelacionNO.Caption("Finalizar")
+Gui.F_TipoRelacion.cmdTRelacionNO.Event(Click,cmdTRelacionNO_Click)
+Gui.F_TipoRelacion.cmdTRelacionNO.FontSize(10)
+Gui.F_TipoRelacion.lblDashboard.Create(Label,"Relaciones Existentes:",True,2370,495,0,465,1185,True,0,"Arial",10,-2147483633,0)
+Gui.F_TipoRelacion.GsGridTipoRelDash.Create(GsGridControl)
+Gui.F_TipoRelacion.GsGridTipoRelDash.Size(9405,4005)
+Gui.F_TipoRelacion.GsGridTipoRelDash.Position(375,1740)
+Gui.F_TipoRelacion.lblInvoice.Create(Label,"Factura",True,1995,495,0,870,585,True,0,"Arial",10,-2147483633,0)
+Gui.F_TipoRelacion.txtInvoice.Create(TextBox,"",True,2250,300,0,3225,660,True,0,"Arial",8,-2147483643,1)
+Gui.F_TipoRelacion.txtInvoice.Locked(True)
+Gui.F_TipoRelacion.cmdBorrarRel.Create(Button)
+Gui.F_TipoRelacion.cmdBorrarRel.Size(3285,705)
+Gui.F_TipoRelacion.cmdBorrarRel.Position(4515,6030)
+Gui.F_TipoRelacion.cmdBorrarRel.Caption("Borrar Relacion")
+Gui.F_TipoRelacion.cmdBorrarRel.FontSize(10)
+Gui.F_TipoRelacion.cmdBorrarRel.Event(Click,cmdBorrarRel_Click)
+Gui.F_FacturasDash..Create
+Gui.F_FacturasDash..Caption("SAT CFDI DASHBOARD")
+Gui.F_FacturasDash..Size(18870,10335)
+Gui.F_FacturasDash..MinX(0)
+Gui.F_FacturasDash..MinY(0)
+Gui.F_FacturasDash..Position(0,0)
+Gui.F_FacturasDash..BackColor(-2147483633)
+Gui.F_FacturasDash..MousePointer(0)
+Gui.F_FacturasDash..Event(UnLoad,Unload)
+Gui.F_FacturasDash.cmdReload.Create(Button)
+Gui.F_FacturasDash.cmdReload.Size(1335,375)
+Gui.F_FacturasDash.cmdReload.Position(17025,135)
+Gui.F_FacturasDash.cmdReload.Caption("ACTUALIZAR")
+Gui.F_FacturasDash.cmdReload.Event(Click,cmdReload_Click)
+Gui.F_FacturasDash.tabCFDI.Create(Tab)
+Gui.F_FacturasDash.tabCFDI.Size(18225,8895)
+Gui.F_FacturasDash.tabCFDI.Position(255,600)
+Gui.F_FacturasDash.tabCFDI.Tabs(4)
+Gui.F_FacturasDash.tabCFDI.SetTab(0)
+Gui.F_FacturasDash.tabCFDI.Caption("FACTURAS TIMBRADAS")
+Gui.F_FacturasDash.tabCFDI.SetTab(1)
+Gui.F_FacturasDash.tabCFDI.Caption("DATOS FACTURA")
+Gui.F_FacturasDash.tabCFDI.SetTab(2)
+Gui.F_FacturasDash.tabCFDI.Caption("DATOS COMERCIO EXTERIOR")
+Gui.F_FacturasDash.tabCFDI.SetTab(3)
+Gui.F_FacturasDash.tabCFDI.Caption("DATOS COMPLEMENTO PAGOS")
+Gui.F_FacturasDash.GsGridFacturas.Create(GsGridControl)
+Gui.F_FacturasDash.GsGridFacturas.Size(18060,8490)
+Gui.F_FacturasDash.GsGridFacturas.Position(0,0)
+Gui.F_FacturasDash.GsGridFacturas.Event(RowCellClick,GsGridFacturas_RowCellClick)
+Gui.F_FacturasDash.GsGridFacturas.Parent("tabCFDI",0)
+Gui.F_FacturasDash.GsGridDFACT.Create(GsGridControl)
+Gui.F_FacturasDash.GsGridDFACT.Size(18000,8385)
+Gui.F_FacturasDash.GsGridDFACT.Position(0,0)
+Gui.F_FacturasDash.GsGridDFACT.Parent("tabCFDI",1)
+Gui.F_FacturasDash.GsGridDCOMEXT.Create(GsGridControl)
+Gui.F_FacturasDash.GsGridDCOMEXT.Size(18030,8445)
+Gui.F_FacturasDash.GsGridDCOMEXT.Position(0,0)
+Gui.F_FacturasDash.GsGridDCOMEXT.Parent("tabCFDI",2)
+Gui.F_FacturasDash.GsGridDCOMPAGOS.Create(GsGridControl)
+Gui.F_FacturasDash.GsGridDCOMPAGOS.Size(18000,8430)
+Gui.F_FacturasDash.GsGridDCOMPAGOS.Position(0,0)
+Gui.F_FacturasDash.GsGridDCOMPAGOS.Parent("tabCFDI",3)
+Gui.F_TeknikPreFactura..Create
+Gui.F_TeknikPreFactura..Caption("PRE-TIMBRADO TEKNIK")
+Gui.F_TeknikPreFactura..Size(15360,10695)
+Gui.F_TeknikPreFactura..MinX(0)
+Gui.F_TeknikPreFactura..MinY(0)
+Gui.F_TeknikPreFactura..Position(0,0)
+Gui.F_TeknikPreFactura..BackColor(-2147483633)
+Gui.F_TeknikPreFactura..MousePointer(0)
+Gui.F_TeknikPreFactura..Event(UnLoad,F_TeknikPreFactura_UnLoad)
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.Create(Tab)
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.Size(14835,9210)
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.Position(90,630)
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.Tabs(5)
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.SetTab(0)
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.Caption("CFDI")
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.SetTab(1)
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.Caption("ANEXO")
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.SetTab(2)
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.Caption("CONC")
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.SetTab(3)
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.Caption("EXTE")
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.SetTab(4)
+Gui.F_TeknikPreFactura.tabCFDIDASHBOARD.Caption("MERC")
+Gui.F_TeknikPreFactura.GsGridCFDI.Create(GsGridControl)
+Gui.F_TeknikPreFactura.GsGridCFDI.Size(14595,8610)
+Gui.F_TeknikPreFactura.GsGridCFDI.Position(45,60)
+Gui.F_TeknikPreFactura.GsGridCFDI.Parent("tabCFDIDASHBOARD",0)
+Gui.F_TeknikPreFactura.GsGridANEXO.Create(GsGridControl)
+Gui.F_TeknikPreFactura.GsGridANEXO.Size(14655,8730)
+Gui.F_TeknikPreFactura.GsGridANEXO.Position(0,0)
+Gui.F_TeknikPreFactura.GsGridANEXO.Parent("tabCFDIDASHBOARD",1)
+Gui.F_TeknikPreFactura.GsGridCONC.Create(GsGridControl)
+Gui.F_TeknikPreFactura.GsGridCONC.Size(14625,8655)
+Gui.F_TeknikPreFactura.GsGridCONC.Position(0,45)
+Gui.F_TeknikPreFactura.GsGridCONC.Parent("tabCFDIDASHBOARD",2)
+Gui.F_TeknikPreFactura.GsGridEXTE.Create(GsGridControl)
+Gui.F_TeknikPreFactura.GsGridEXTE.Size(14610,8640)
+Gui.F_TeknikPreFactura.GsGridEXTE.Position(0,30)
+Gui.F_TeknikPreFactura.GsGridEXTE.Parent("tabCFDIDASHBOARD",3)
+Gui.F_TeknikPreFactura.GsGridMERC.Create(GsGridControl)
+Gui.F_TeknikPreFactura.GsGridMERC.Size(14610,8685)
+Gui.F_TeknikPreFactura.GsGridMERC.Position(0,0)
+Gui.F_TeknikPreFactura.GsGridMERC.Parent("tabCFDIDASHBOARD",4)
+Gui.F_TeknikPreFactura.cmdReload.Create(Button)
+Gui.F_TeknikPreFactura.cmdReload.Size(1680,375)
+Gui.F_TeknikPreFactura.cmdReload.Position(13110,195)
+Gui.F_TeknikPreFactura.cmdReload.Caption("ACTUALIZAR")
+Gui.F_TeknikPreFactura.cmdReload.Event(Click,cmdReloadTeknik_Click)
+Gui.F_TeknikPreFactura.lbl1.Create(Label,"INFORMACION PARA EL TIMBRADO DE FACTURAS",True,8520,255,0,2145,300,True,2,"Arial",8,-2147483633,0)
+Gui.F_TeknikPreFactura.lbl1.DefaultValue("")
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+v.Global.sInvoice.Declare
+v.global.sTipoRelacion.Declare
+v.global.sTerminal.Declare
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+V.Local.sIcon.Declare
+V.Local.sPart.Declare
+v.Local.sDesc.declare
+v.Local.bCheck.Declare
+v.Local.sSQL.Declare
+v.Local.sTableCheck.Declare
+V.Local.bExists.Declare
+
+
+
+F.ODBC.Connection!CONX.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+'INVENTORY MASTER AUTOPUPULATE
+F.Intrinsic.Control.If(v.Caller.Hook,=,10120)
+	V.Passed.000070.Set("Clave Prod")
+	f.Intrinsic.Control.If(v.Passed.000007.Trim,=,"")
+		F.Intrinsic.UI.ChangeCallerProperty(variable.passed.000070, "LOCK", 1)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.UI.ChangeCallerProperty(variable.Passed.000070, "LOCK", 0)
+	f.Intrinsic.Control.EndIf
+'INVENTORY MASTER SCRIPT 3
+F.Intrinsic.Control.ElseIf(v.Caller.Hook,=,10230)
+	f.Intrinsic.Control.CallSub(f_conceptos_load)
+	Gui.F_ConceptosSAT..Show
+'INVENTORY MASTER PART LOAD
+F.Intrinsic.Control.ElseIf(v.Caller.Hook,=,10125)
+	f.Intrinsic.Control.If(v.Passed.000007.Trim,=,"")
+		F.Intrinsic.UI.ChangeCallerProperty(variable.passed.000070, "LOCK", 1)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.UI.ChangeCallerProperty(variable.Passed.000070, "LOCK", 0)
+	f.Intrinsic.Control.EndIf
+'INVENTORY MASTER PRESAVE BUTTON
+f.Intrinsic.Control.ElseIf(v.Caller.Hook,=,10170)
+	f.Intrinsic.Control.CallSub(CLAVEPRODSERV_Check)
+'	F.Intrinsic.Control.If(v.Passed.000012,=)
+	v.Local.sDesc.Set(v.Passed.000012)
+	f.Intrinsic.String.IsInString(v.Local.sDesc,"*",true,v.Local.bCheck)
+	f.Intrinsic.Control.If(v.Local.bCheck)
+		f.Intrinsic.UI.Msgbox("La Descripcion contiene un Caracter Invalido(*) para el timbrado de Facturacion Electronica, favor de modificarlo antes de continuar")
+		v.Passed.777777.Set("1")
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.IsInString(v.Local.sDesc,"|",true,v.Local.bCheck)
+	f.Intrinsic.Control.If(v.Local.bCheck)
+		f.Intrinsic.UI.Msgbox("La Descripcion contiene un Caracter Invalido(|) para el timbrado de Facturacion Electronica, favor de modificarlo antes de continuar")
+		v.Passed.777777.Set("1")
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.IsInString(v.Local.sDesc,"<",true,v.Local.bCheck)
+	f.Intrinsic.Control.If(v.Local.bCheck)
+		f.Intrinsic.UI.Msgbox("La Descripcion contiene un Caracter Invalido(<) para el timbrado de Facturacion Electronica, favor de modificarlo antes de continuar")
+		v.Passed.777777.Set("1")
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.IsInString(v.Local.sDesc,">",true,v.Local.bCheck)
+	f.Intrinsic.Control.If(v.Local.bCheck)
+		f.Intrinsic.UI.Msgbox("La Descripcion contiene un Caracter Invalido(>) para el timbrado de Facturacion Electronica, favor de modificarlo antes de continuar")
+		v.Passed.777777.Set("1")
+	f.Intrinsic.Control.EndIf
+	v.Local.sPart.Set(v.Passed.000007)
+	f.Intrinsic.String.IsInString(v.Local.sPart,"*",true,v.Local.bCheck)
+	f.Intrinsic.Control.If(v.Local.bCheck)
+		f.Intrinsic.UI.Msgbox("El Numero de Parte contiene un Caracter Invalido(*) para el timbrado de Facturacion Electronica, favor de modificarlo antes de continuar")
+		v.Passed.777777.Set("1")
+	f.Intrinsic.Control.EndIf
+
+	f.Intrinsic.String.IsInString(v.Local.sPart,"|",true,v.Local.bCheck)
+	f.Intrinsic.Control.If(v.Local.bCheck)
+		f.Intrinsic.UI.Msgbox("El Numero de Parte contiene un Caracter Invalido(|) para el timbrado de Facturacion Electronica, favor de modificarlo antes de continuar")
+		v.Passed.777777.Set("1")
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.IsInString(v.Local.sPart,"<",true,v.Local.bCheck)
+	f.Intrinsic.Control.If(v.Local.bCheck)
+		f.Intrinsic.UI.Msgbox("El Numero de Parte contiene un Caracter Invalido(<) para el timbrado de Facturacion Electronica, favor de modificarlo antes de continuar")
+		v.Passed.777777.Set("1")
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.IsInString(v.Local.sPart,">",true,v.Local.bCheck)
+	f.Intrinsic.Control.If(v.Local.bCheck)
+		f.Intrinsic.UI.Msgbox("El Numero de Parte contiene un Caracter Invalido(>) para el timbrado de Facturacion Electronica, favor de modificarlo antes de continuar")
+		v.Passed.777777.Set("1")
+	f.Intrinsic.Control.EndIf
+
+'CUSTOMER MASTER DIRECCION AUTOPUPULATE
+F.Intrinsic.Control.ElseIf(v.Caller.Hook,=,14350)
+	V.Passed.000203.Set("CP y Pais")
+	V.Passed.Global.Set(V.Passed.000002)
+	
+'CUSTOMER MASTER QUERY 3
+F.Intrinsic.Control.ElseIf(v.Caller.Hook,=,14380)
+	V.Passed.000203.Set("CP y Pais")
+	F.Intrinsic.Control.CallSub(F_Direccion_Load)
+	Gui.F_Direccion..Show
+F.Intrinsic.Control.ElseIf(v.Caller.Hook,=,38006)
+	V.Passed.000203.Set("CP y Pais")
+	F.Intrinsic.Control.CallSub(F_Direccion_Load)
+	Gui.F_Direccion..Show	
+	
+'CUSTOMER MASTER PRESAVE
+f.Intrinsic.UI.Msgbox(V.Passed.000002)
+f.Intrinsic.Control.ElseIf(v.Caller.Hook,=,14384)
+	f.Intrinsic.Control.CallSub(F_Direccion_Check)
+	
+'SAT UNIDAD DE MEDIDA
+F.Intrinsic.Control.ElseIf(v.Caller.Switches,=,"F")
+	F.Intrinsic.String.Build("{0}\ART\GSS2.ico",V.Caller.GlobalDir,V.Local.sIcon)
+	Gui.F_UM..Icon(V.Local.sIcon)
+	Gui.F_UM.GsGCUM.Anchor(15)
+	F.Intrinsic.Control.CallSub(loaddatatable)
+	Gui.F_UM..Show
+
+'LEYENDAS FISCALES
+'Customer Master Options populate hook 14341
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,14341)
+	V.Passed.000184.Set("Leyendas Fisc.")
+	
+'Customer Master Options  script 2 hook 14343
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,14343)
+	F.Intrinsic.Control.CallSub(F_LeyendaFiscal_Load)
+	
+'TIPO RELACION
+
+F.Intrinsic.Control.ElseIf(v.Caller.Hook,=,16090)
+	F.Intrinsic.Control.If(v.Passed.009001,=,"000055")
+		v.global.sTerminal.Set(V.Passed.BIP_Terminal)
+	
+		'SAVE TERMINAL NUMBER IN A CUSTOM TABLE
+		F.Data.DataTable.CreateFromSQL("Terminal_DT", "CONX", "SELECT TERMINAL FROM GAB_5013_CFDI_TRMNL")
+		'IF STATEMENT TO VEIRFY IF THERE IS DATA ON THE DATATABLE
+		F.Intrinsic.Control.If(v.DataTable.Terminal_DT.RowCount,=,0)
+			F.Intrinsic.String.Build("INSERT INTO GAB_5013_CFDI_TRMNL(TERMINAL) VALUES ({0})",v.global.sTerminal,v.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+			f.Intrinsic.Control.CallSub(TipoRelacionLoad)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("UPDATE GAB_5013_CFDI_TRMNL SET TERMINAL = '{0}'",v.global.sTerminal,v.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+			f.Data.DataTable.Close("Terminal_DT")
+			f.Intrinsic.Control.CallSub(TipoRelacionLoad)	
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		f.Intrinsic.Control.CallSub(Unload)
+	F.Intrinsic.Control.EndIF
+	
+'FACTURACION ELECTRONICA DASHBOARD'
+
+
+f.Intrinsic.Control.ElseIf(v.Caller.Switches,=,"E")
+'Function.Intrinsic.Debug.InvokeDebugger
+'Function.Intrinsic.Debug.Stop
+	'Accounts Receivable > View > FACTURACION ELECTRONICA DASHBOARD
+	'verify if table GAB_5013_CFDI_URL  if not it creates table 
+	F.ODBC.Connection!conx.TableExists("GAB_5013_CFDI_URL",V.Local.bExists)
+	F.Intrinsic.Control.If(v.Local.bExists,=,False)
+		f.Intrinsic.UI.Msgbox("No se encuentra la ubicacion del URL, favor de contactar a GSS para la configuracion")
+		f.Intrinsic.Control.CallSub(Unload)
+	f.Intrinsic.Control.Else
+			F.ODBC.Connection!conx.ExecuteAndReturn("SELECT COUNT(UNC_PATH) FROM GAB_5013_CFDI_URL",v.Local.sTableCheck)
+			f.Intrinsic.Control.If(v.Local.sTableCheck,=,1)
+				f.Intrinsic.Control.CallSub(FacturacionDashboardLoad)
+			f.Intrinsic.Control.Else
+				f.Intrinsic.UI.Msgbox("No se encuentra la ubicacion del URL, favor de contactar a GSS para la configuracion")
+				f.Intrinsic.Control.CallSub(Unload)
+			f.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+'''''''''''''''''TEKNIK DASHBOARD'''''''''''''''''
+f.Intrinsic.Control.ElseIf(v.Caller.Switches,=,"T")	
+	f.Intrinsic.Control.CallSub(TEKNIKDashboardLoad)
+	
+F.Intrinsic.Control.EndIF
+Program.Sub.Main.End
+
+''''''''''''''INVENTORY MASTER ''''''''''''''
+Program.Sub.cmd2_Click.Start
+V.Local.sPart.Declare(String)
+v.Local.sRet.Declare(string)
+V.Local.sSQL.Declare(string)
+v.Local.sTemp.Declare(string)
+v.Local.sTitles.Declare(string)
+v.Local.iWidths.Declare(long)
+
+'Load part info into custom table CFDI_C_CLAVEPRODSERV
+F.Intrinsic.String.Split("CLAVEPRODSERV*!*DESCRIPCION","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("100*!*800","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("SELECCIONE CODIGO DE CLAVE PRODUCTO SERVICIO DESDE CATALAGO DEL SAT","conx","select * from CFDI_C_CLAVEPRODSERV",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	Gui.F_ConceptosSAT.txtProdServ.Text(V.Local.sRet(0).Trim)
+
+	F.Intrinsic.String.GSSPartString(V.Passed.000007,V.Passed.000008,V.Local.sPart)
+
+	F.Intrinsic.String.Build("select CLAVEPRODSERV from CFDI_INVMSTRFORM where part = '{0}'",V.Local.sPart.Trim,V.Local.sSQL)
+	F.ODBC.Connection!CONX.OpenLocalRecordSetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.CONX!rst.EOF,=,True)
+		F.Intrinsic.String.Build("INSERT INTO CFDI_INVMSTRFORM(PART,CLAVEPRODSERV) VALUES('{0}','{1}')",V.Local.sPart.Trim,v.Local.sRet(0).Trim,V.Local.sSQL)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("UPDATE CFDI_INVMSTRFORM set CLAVEPRODSERV ='{1}' where part = '{0}'",V.Local.sPart.Trim,v.Local.sRet(0).Trim,V.Local.sSQL)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+	F.Intrinsic.UI.Msgbox("DATOS GUARDADOS")
+	F.ODBC.CONX!rst.Close
+F.Intrinsic.Control.EndIf
+
+Program.Sub.cmd2_Click.End
+
+Program.Sub.F_Conceptos_Load.Start
+V.Local.sPart.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sPO.Declare(String)
+
+'Load Existing Data from Custom Table CFDI_INVMSTRFORM
+F.Intrinsic.String.GSSPartString(V.Passed.000007,V.Passed.000008,V.Local.sPart)
+F.Intrinsic.String.Build("select * from CFDI_INVMSTRFORM WHERE PART ='{0}'",V.Local.sPart.Trim,V.Local.sSql)
+F.ODBC.Connection!conx.OpenRecordsetRO("rstLoad",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.EOF,=,False)
+	Gui.F_ConceptosSAT.txtProdServ.Text(V.ODBC.conx!rstLoad.FieldVal!CLAVEPRODSERV)
+F.Intrinsic.Control.EndIf
+Program.Sub.F_Conceptos_Load.End
+
+Program.Sub.F_ConceptosSAT_UnLoad.Start
+F.ODBC.Connection!CONX.Close
+F.Intrinsic.Control.End
+Program.Sub.F_ConceptosSAT_UnLoad.End
+
+Program.Sub.CLAVEPRODSERV_Check.Start
+v.Local.sSQL.Declare
+v.Local.sPart.Declare
+
+'Validation if data is not available before saving data
+F.Intrinsic.String.GSSPartString(V.Passed.000007,V.Passed.000008,V.Local.sPart)
+F.Intrinsic.String.Build("select CLAVEPRODSERV from CFDI_INVMSTRFORM where part = '{0}'",v.local.sPart.Trim,V.Local.sSQL)
+F.ODBC.Connection!CONX.OpenLocalRecordSetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.CONX!rst.EOF,=,True)
+	F.Intrinsic.UI.Msgbox("Dato Clave Producto Servicio no guardado, favor de ingresar el codigo necesario")
+	Gui.F_ConceptosSAT..ControlBox(False)
+	Gui.F_ConceptosSAT..Show
+F.Intrinsic.Control.EndIf
+Program.Sub.CLAVEPRODSERV_Check.End
+
+Program.Sub.txtProdServ_Change.Start
+F.Intrinsic.Control.If(V.Screen.F_ConceptosSAT!txtProdServ.Text,<>,"")
+	Gui.F_ConceptosSAT..ControlBox(True)
+F.Intrinsic.Control.EndIf
+Program.Sub.txtProdServ_Change.End
+
+''''''''''''''''''CUSTOMER MASTER DIRECCION CODE'''''''''''''''
+Program.Sub.cmdCodigoPostal_Click.Start
+v.Local.sRet.Declare(string)
+V.Local.sSQL.Declare(string)
+v.Local.sTemp.Declare(string)
+v.Local.sTitles.Declare(string)
+v.Local.iWidths.Declare(long)
+
+'Load Custom Browser from Custom Table CFDI_C_CODIGOPOSTAL Into Form
+F.Intrinsic.String.Split("CODIGO_POSTAL*!*ESTADO","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("100*!*800","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("SELECCIONE CODIGO POSTAL DESDE CATALAGO DEL SAT","conx","select CODIGO_POSTAL, ESTADO from CFDI_C_CODIGOPOSTAL",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+ F.Intrinsic.Control.Else
+ F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	gui.F_Direccion.txtCP.Text(V.Local.sRet(0).Trim)
+
+F.Intrinsic.Control.EndIf
+
+Program.Sub.cmdCodigoPostal_Click.End
+
+Program.Sub.cmdPais_Click.Start
+v.Local.sRet.Declare(string)
+V.Local.sSQL.Declare(string)
+v.Local.sTemp.Declare(string)
+v.Local.sTitles.Declare(string)
+v.Local.iWidths.Declare(long)
+
+'Load Custom Browser from Custom Table CFDI_C_PAIS and save into form
+F.Intrinsic.String.Split("CODIGO_PAIS*!*DESCRIPCION","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("100*!*800","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("SELECCIONE CODIGO_PAIS DESDE EL CATALAGO DEL SAT","conx","select * from CFDI_C_PAIS",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+ F.Intrinsic.Control.Else
+ F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+ gui.F_Direccion.txtPais.Text(V.Local.sRet(0).Trim)
+
+F.Intrinsic.Control.EndIf
+
+Program.Sub.cmdPais_Click.End
+
+Program.Sub.cmdEstado_Click.Start
+v.Local.sRet.Declare(string)
+V.Local.sSQL.Declare(string)
+v.Local.sTemp.Declare(string)
+v.Local.sTitles.Declare(string)
+v.Local.iWidths.Declare(long)
+
+'Load Custom Browser from Custom Table CFDI_C_ESTADO Into Form
+F.Intrinsic.String.Split("ESTADO*!*PAIS*!*NOMBRE_ESTADO","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("100*!*500*!*500","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("SELECCIONE ESTADO DESDE EL CATALAGO DEL SAT","conx","select * from CFDI_C_ESTADO",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+ F.Intrinsic.Control.Else
+ F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+ gui.F_Direccion.txtEstadoCom.Text(V.Local.sRet(0).Trim)
+ F.Intrinsic.Control.EndIf
+Program.Sub.cmdEstado_Click.End
+
+Program.Sub.cmdSave_Click.Start
+V.Local.sSQL.Declare(String)
+V.Local.sCustomer.Declare(String)
+V.Local.sCustomer.Set(V.Passed.000002)
+
+
+'Load Custom Browser from Custom Table CFDI_DIRECCIONv Into Form
+F.Intrinsic.String.Build("SELECT * FROM CFDI_DIRECCION WHERE CUSTOMER = '{0}'",V.Local.sCustomer.Trim,V.Local.sSQL)
+F.ODBC.Connection!CONX.OpenLocalRecordsetRW("RSTCA",v.Local.sSQL)
+f.Intrinsic.Control.If(V.Screen.F_Direccion!txtPais.Text.trim,=,"","OR",V.Screen.F_Direccion!txtCP.Text.trim,=,"")
+	f.Intrinsic.Control.If(v.Screen.F_Direccion!chkComplemento.CheckedAsBoolean,=,True)
+		f.Intrinsic.Control.If(V.Screen.F_Direccion!txtEstadoCom.Text.trim,=,"")
+			F.Intrinsic.UI.Msgbox("DIRECCION NO GUARDADA")
+			f.Intrinsic.Control.ExitSub
+		f.Intrinsic.Control.EndIf
+		F.Intrinsic.UI.Msgbox("DIRECCION NO GUARDADA")
+		f.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(v.ODBC.CONX!RSTCA.EOF,=,True)
+	F.ODBC.CONX!RSTCA.AddNew
+	F.ODBC.Conx!RSTCA.Set!CUSTOMER(V.Local.sCustomer)
+F.Intrinsic.Control.EndIf
+f.Intrinsic.Control.If(v.Screen.F_Direccion!chkComplemento.CheckedAsBoolean,=,True)
+	F.ODBC.CONX!RSTCA.Set!ESTADO(V.Screen.F_Direccion!txtEstadoCom.Text)
+f.Intrinsic.Control.EndIf
+F.ODBC.CONX!RSTCA.Set!CODIGO_POSTAL(V.Screen.F_Direccion!txtCP.Text)
+F.ODBC.CONX!RSTCA.Set!PAIS(V.Screen.F_Direccion!txtPais.Text)
+F.ODBC.Conx!RSTCA.Update
+F.Intrinsic.UI.Msgbox("DIRECCION GUARDADA")
+F.ODBC.Conx!RSTCA.Close
+
+Program.Sub.cmdSave_Click.End
+
+Program.Sub.F_Direccion_UnLoad.Start
+F.ODBC.Connection!CONX.Close
+F.Intrinsic.Control.End
+
+Program.Sub.F_Direccion_UnLoad.End
+
+Program.Sub.F_Direccion_Load.Start
+V.Local.sCustomer.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sPO.Declare(String)
+
+'Load Existing Data into Form from Custom Table CFDI_DIRECCION
+V.Local.sCustomer.Set(V.Passed.000002)
+F.Intrinsic.String.Build("SELECT * FROM CFDI_DIRECCION WHERE CUSTOMER='{0}'",V.Local.sCustomer,V.Local.sSql)
+F.ODBC.Connection!conx.OpenRecordsetRO("rstLoad",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.EOF,=,"False")
+	f.Intrinsic.Control.If(V.ODBC.conx!rstLoad.FieldValTrim!ESTADO,=,"")
+		gui.F_Direccion.chkComplemento.Value(0)
+		gui.F_Direccion.cmdEstadoCom.Visible(False)
+		gui.F_Direccion.lblEstadoCom.Visible(False)
+		gui.F_Direccion.txtEstadoCom.Visible(False)
+		gui.F_Direccion.txtCP.Locked(True)
+		gui.F_Direccion.txtCP.Visible(True)
+		gui.F_Direccion.cmdCPNat.Visible(True)
+		gui.F_Direccion.lblCP.Visible(True)
+		gui.F_Direccion.txtPais.Visible(True)
+		gui.F_Direccion.cmdPais.Visible(True)
+		gui.F_Direccion.lblPais.Visible(True)
+		gui.F_Direccion.txtCP.Text (V.ODBC.conx!rstLoad.FieldValTrim!CODIGO_POSTAL)
+		gui.F_Direccion.txtPais.Text (V.ODBC.conx!rstLoad.FieldValTrim!PAIS)	
+	f.Intrinsic.control.Else
+		gui.F_Direccion.chkComplemento.Value(1)
+		gui.F_Direccion.cmdEstadoCom.Visible(True)
+		gui.F_Direccion.lblEstadoCom.Visible(True)
+		gui.F_Direccion.txtEstadoCom.Visible(True)
+		gui.F_Direccion.txtCP.Locked(False)
+		gui.F_Direccion.txtCP.Visible(True)
+		gui.F_Direccion.cmdCPNat.Visible(False)
+		gui.F_Direccion.lblCP.Visible(True)
+		gui.F_Direccion.txtPais.Visible(True)
+		gui.F_Direccion.cmdPais.Visible(True)
+		gui.F_Direccion.lblPais.Visible(True)
+		gui.F_Direccion.txtCP.Text (V.ODBC.conx!rstLoad.FieldValTrim!CODIGO_POSTAL)
+		gui.F_Direccion.txtPais.Text (V.ODBC.conx!rstLoad.FieldValTrim!PAIS)
+		gui.F_Direccion.txtEstadoCom.Text (V.ODBC.conx!rstLoad.FieldValTrim!ESTADO)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Else
+	gui.F_Direccion.cmdEstadoCom.Visible(False)
+	gui.F_Direccion.lblEstadoCom.Visible(False)
+	gui.F_Direccion.txtEstadoCom.Visible(False)
+	gui.F_Direccion.txtCP.Locked(True)
+	gui.F_Direccion.txtCP.Visible(True)
+	gui.F_Direccion.cmdCPNat.Visible(True)
+	gui.F_Direccion.lblCP.Visible(True)
+	gui.F_Direccion.txtPais.Visible(True)
+	gui.F_Direccion.cmdPais.Visible(True)
+	gui.F_Direccion.lblPais.Visible(True)
+F.Intrinsic.Control.EndIf
+
+Program.Sub.F_Direccion_Load.End
+
+Program.Sub.chkComplemento_Click.Start
+f.Intrinsic.Control.If(v.Screen.F_Direccion!chkComplemento.CheckedAsBoolean,=,True)
+
+
+	gui.F_Direccion.cmdEstadoCom.Visible(True)
+	gui.F_Direccion.lblEstadoCom.Visible(True)
+	gui.F_Direccion.txtEstadoCom.Visible(True)
+	gui.F_Direccion.txtCP.Locked(False)
+	gui.F_Direccion.txtCP.Visible(True)
+	gui.F_Direccion.cmdCPNat.Visible(False)
+	gui.F_Direccion.lblCP.Visible(True)
+	gui.F_Direccion.txtPais.Visible(True)
+	gui.F_Direccion.cmdPais.Visible(True)
+	gui.F_Direccion.lblPais.Visible(True)
+f.Intrinsic.Control.Else
+
+	gui.F_Direccion.cmdEstadoCom.Visible(False)
+	gui.F_Direccion.lblEstadoCom.Visible(False)
+	gui.F_Direccion.txtEstadoCom.Visible(False)
+	gui.F_Direccion.txtCP.Locked(True)
+	gui.F_Direccion.txtCP.Visible(True)
+	gui.F_Direccion.cmdCPNat.Visible(True)
+	gui.F_Direccion.lblCP.Visible(True)
+	gui.F_Direccion.txtPais.Visible(True)
+	gui.F_Direccion.cmdPais.Visible(True)
+	gui.c.lblPais.Visible(True)
+
+f.Intrinsic.Control.EndIf
+Program.Sub.chkComplemento_Click.End
+
+Program.Sub.F_Direccion_Check.Start
+v.Local.sSQL.Declare
+v.Local.sCustomer.Declare
+v.Local.sRFC.Declare
+
+'Validation if data is saved into custom table in pre-save
+V.Local.sCustomer.Set(V.Passed.000002)
+F.Intrinsic.String.Build("select * from CFDI_DIRECCION where customer = '{0}'",v.local.sCustomer.Trim,V.Local.sSQL)
+F.ODBC.Connection!CONX.OpenLocalRecordSetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.CONX!rst.EOF,=,True)
+	F.Intrinsic.UI.Msgbox("Catalagos de Direccion no guardados, favor de ingresar los codigos necesarios")
+	Gui.F_Direccion..ControlBox(False)
+	Gui.F_Direccion..Show
+F.Intrinsic.Control.EndIf
+'Validation length of Attention 12-13 characters long
+v.Local.sRFC.Set(v.Passed.000021)
+f.Intrinsic.Control.If(v.Local.sRFC.Length,<,12,"OR",v.Local.sRFC.Length,>,13)
+	F.Intrinsic.UI.Msgbox("RFC incorrecto, debe tener al menos 12(personas morales) o 13(personas fisicas) caracteres, reingresa el RFC y dar clic en guardar de nuevo")
+	V.Passed.777777.Set(1)
+F.Intrinsic.Control.EndIf
+'Validation Warning for other RFC available (select customer from CUSTOMER_MASTER where attention = 'XEXX010101000')
+'f.Intrinsic.String.Build("select customer from v_CUSTOMER_MASTER where attention = '{0}'",V.Local.sRFC,V.Local.sSQL)
+'F.ODBC.Connection!CONX.OpenLocalRecordSetRO("rstRFC",V.Local.sSQL)
+'F.Intrinsic.Control.If(V.ODBC.CONX!rstRFC.EOF,=,True)
+'F.Intrinsic.UI.Msgbox("RFC localizado en"V.Local.sSQL)
+
+'F.Intrinsic.Control.EndIf
+Program.Sub.F_Direccion_Check.End
+
+Program.Sub.txtPais_Change.Start
+F.Intrinsic.Control.If(V.Screen.F_Direccion!txtPais.Text,<>,"")
+	Gui.F_Direccion..ControlBox(True)
+F.Intrinsic.Control.EndIf
+f.intrinsic.control.If(V.Screen.F_Direccion!txtPais.Text.trim,=,"USA","OR",V.Screen.F_Direccion!txtPais.Text.trim,=,"CAN",V.Screen.F_Direccion!txtPais.Text.trim,=,"MEX")
+	gui.F_Direccion.txtEstadoCom.Locked(True)
+F.Intrinsic.Control.Else
+	Gui.F_Direccion.txtEstadoCom.Locked(False)
+F.Intrinsic.Control.EndIf
+
+Program.Sub.txtPais_Change.End
+
+'''''''''''SAT UNIDAD DE MEDIDA CODE'''''''''''
+Program.Sub.LoadDatatable.Start
+V.Local.i1.Declare
+V.Local.sClaveunidad.Declare
+V.Local.sSQL.Declare
+
+'Load Data Table
+F.Data.DataTable.CreateFromSQL("dtUM","Conx","select code as UM_GSS, descr as Desc_GSS from v_um_codes order by code",True)
+F.Data.DataTable.AddColumn("dtUM","UM_Catalog","String")
+F.Data.DataTable.AddColumn("dtUM","Desc_Catalog","String")
+
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtUM.RowCount--,1)
+	F.Intrinsic.String.Build("select CLAVEUNIDAD from CFDI_UM_SAT where Unit_Measure = '{0}'",V.DataTable.dtUM(V.Local.i1).UM_GSS!FieldValTrim,V.Local.sSQL)
+	F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.Conx!rst.EOF,=,False)
+		V.Local.sClaveunidad.Set(V.ODBC.Conx!rst.FieldValTrim!CLAVEUNIDAD)
+		F.ODBC.Conx!rst.Close
+		F.Intrinsic.String.Build("select nombre from CFDI_C_CLAVEUNIDAD where claveunidad = '{0}'",V.Local.sClaveunidad,V.Local.sSQL)
+		F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.Conx!rst.EOF,=,False)
+			F.Data.DataTable.SetValue("dtUM",V.Local.i1,"UM_Catalog",V.Local.sClaveunidad.Trim,"Desc_Catalog",V.ODBC.Conx!rst.FieldValTrim!nombre)
+		F.Intrinsic.Control.Else
+			F.Data.DataTable.SetValue("dtUM",V.Local.i1,"UM_Catalog",V.Local.sClaveunidad.Trim)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	F.ODBC.Conx!rst.Close
+F.Intrinsic.Control.Next(V.Local.i1)
+
+Gui.F_UM.GsGCUM.AddGridviewFromDatatable("gvUM","dtUM")
+Gui.F_UM.GsGCUM.MainView("gvUM")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","UM_GSS","Caption","UM (GSS)")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","Desc_GSS","Caption","Descripcion (GSS)")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","UM_Catalog","Caption","UM (Catalogo)")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","Desc_Catalog","Caption","Descripcion (Catalogo)")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","UM_GSS","HeaderHAlignment","Center")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","Desc_GSS","HeaderHAlignment","Center")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","UM_Catalog","HeaderHAlignment","Center")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","Desc_Catalog","HeaderHAlignment","Center")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","UM_GSS","CellHAlignment","Center")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","UM_Catalog","CellHAlignment","Center")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","UM_GSS","MinWidth","90")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","Desc_GSS","MinWidth","140")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","UM_Catalog","MinWidth","90")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","Desc_Catalog","MinWidth","140")
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","UM_Catalog","CellBackcolor",V.Color.LtGray)
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","Desc_Catalog","CellBackcolor",V.Color.LtGray)
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","UM_Catalog","AllowEdit",False)
+Gui.F_UM.GsGCUM.SetColumnProperty("gvUM","Desc_Catalog","AllowEdit",False)
+Program.Sub.LoadDatatable.End
+
+Program.Sub.Unload.Start
+F.Intrinsic.Control.If(V.DataTable.dtUM.Exists,=,True)
+	F.Data.DataTable.Close("dtUM")
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!Conx.Close
+F.Intrinsic.Control.End
+
+Program.Sub.Unload.End
+
+Program.Sub.GsGCUM_CellClick.Start
+v.Local.sRet.Declare(string)
+V.Local.sSQL.Declare(string)
+v.Local.sTemp.Declare(string)
+v.Local.sTitles.Declare(string)
+v.Local.iWidths.Declare(long)
+
+F.Intrinsic.Control.If(V.Args.Column,=,"UM_Catalog")
+	'Open E-invoicing catalog for UM (browser)
+	F.Intrinsic.String.Split("CLAVEUNIDAD*!*DESCRIPCION","*!*",v.local.sTitles)
+	F.Intrinsic.String.Split("100*!*800","*!*",v.local.iWidths)
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser("SELECCIONE CODIGO CLAVEUNIDAD DESDE CATALAGO DEL SAT","conx","select * from CFDI_C_CLAVEUNIDAD",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+	F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.Control.Else
+	 	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+		'Save it into custom table storing relationship between GSS UM and catalog UM
+		F.Intrinsic.String.Build("select CLAVEUNIDAD from CFDI_UM_SAT where Unit_Measure = '{0}'",V.DataTable.dtUM(V.Args.RowIndex).UM_GSS!FieldValTrim,V.Local.sSQL)
+		F.ODBC.Connection!CONX.OpenLocalRecordSetRO("rst",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.CONX!rst.EOF,=,True)
+			F.Intrinsic.String.Build("INSERT into CFDI_UM_SAT (Unit_Measure,CLAVEUNIDAD) VALUES('{0}','{1}')",V.DataTable.dtUM(V.Args.RowIndex).UM_GSS!FieldValTrim,v.Local.sRet(0).Trim,V.Local.sSQL)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("UPDATE CFDI_UM_SAT set CLAVEUNIDAD ='{1}' where Unit_Measure = '{0}'",V.DataTable.dtUM(V.Args.RowIndex).UM_GSS!FieldValTrim,v.Local.sRet(0).Trim,V.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+		F.Intrinsic.UI.Msgbox("UNIDAD DE MEDIDA GUARDADA")	
+		'Store it into datatable
+		F.Data.DataTable.SetValue("dtUM",V.Args.RowIndex,"UM_Catalog",V.Local.sRet(0).Trim,"Desc_Catalog",V.Local.sRet(1).Trim)
+	F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.ElseIf(V.Args.Column,=,"Desc_Catalog")
+		'Same as UM_Catalog
+		F.Intrinsic.String.Split("CLAVEUNIDAD*!*DESCRIPCION","*!*",v.local.sTitles)
+	F.Intrinsic.String.Split("100*!*800","*!*",v.local.iWidths)
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser("SELECCIONE CLAVEUNIDAD DESDE CATALAGO DEL SAT","conx","select * from CFDI_C_CLAVEUNIDAD",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+	F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.Control.Else
+	 	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+		'Save it into custom table storing relationship between GSS UM and catalog UM
+		F.Intrinsic.String.Build("select CLAVEUNIDAD from CFDI_UM_SAT where Unit_Measure = '{0}'",V.DataTable.dtUM(V.Args.RowIndex).UM_GSS!FieldValTrim,V.Local.sSQL)
+		F.ODBC.Connection!CONX.OpenLocalRecordSetRO("rst",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.CONX!rst.EOF,=,True)
+			F.Intrinsic.String.Build("INSERT into CFDI_UM_SAT (Unit_Measure,CLAVEUNIDAD) VALUES('{0}','{1}')",V.DataTable.dtUM(V.Args.RowIndex).UM_GSS!FieldValTrim,v.Local.sRet(0).Trim,V.Local.sSQL)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("UPDATE CFDI_UM_SAT set CLAVEUNIDAD ='{1}' where Unit_Measure = '{0}'",V.DataTable.dtUM(V.Args.RowIndex).UM_GSS!FieldValTrim,v.Local.sRet(0).Trim,V.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+		F.Intrinsic.UI.Msgbox("UNIDAD DE MEDIDA GUARDADA")
+		'Store it into datatable
+		F.Data.DataTable.SetValue("dtUM",V.Args.RowIndex,"UM_Catalog",V.Local.sRet(0).Trim,"Desc_Catalog",V.Local.sRet(1).Trim)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+Program.Sub.GsGCUM_CellClick.End
+
+'''''''''''''LEYENDAS FISCALES''''''''''''
+Program.Sub.cmdSaveLeyFisc_Click.Start
+V.Local.sSQL.Declare(String)
+
+	'SAVE INFORMATION FROM FORM INTO CUSTOM TABLE CFDI_LEYENFISCALES
+	F.Intrinsic.String.Build("SELECT * FROM CFDI_LEYENFISCALES WHERE CUSTOMER = '{0}'",V.Passed.Global.Trim,V.Local.sSQL)
+	F.ODBC.Connection!CONX.OpenLocalRecordsetRW("RST",v.Local.sSQL)
+	F.Intrinsic.Control.If(v.ODBC.CONX!RST.EOF,=,True)
+		F.ODBC.CONX!RST.AddNew
+		F.ODBC.CONX!RST.Set!CUSTOMER(V.Passed.Global.Trim)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.CONX!RST.Set!DISPOSCION_FISCAL(V.Screen.F_LeyendaFiscal!txtDispFisc.Text)
+		F.ODBC.CONX!RST.Set!NORMA(V.Screen.F_LeyendaFiscal!txtNorma.Text)
+		F.ODBC.CONX!RST.Set!TEXTOLEYENDA(V.Screen.F_LeyendaFiscal!txtLeyenda.Text)
+		F.ODBC.CONX!RST.Update
+		F.Intrinsic.UI.Msgbox("INFORMACION LEYENDA FISCAL GUARDADA")
+		F.ODBC.CONX!RST.Close
+
+Program.Sub.cmdSaveLeyFisc_Click.End
+
+Program.Sub.F_LeyendaFiscal_Load.Start
+V.Local.sSQL.Declare
+
+'Load Existing Data into Form searching from custom table CFDI_LEYENFISCALES
+F.Intrinsic.String.Build("select * from CFDI_LEYENFISCALES WHERE CUSTOMER = '{0}'",V.Passed.Global,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenRecordsetRO("rstLoad",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.EOF,=,"False")
+	F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.FieldValTrim!CUSTOMER,=,"")
+		GUI.F_LeyendaFiscal.txtDispFisc.Value(1)
+		GUI.F_LeyendaFiscal.txtNorma.Value(2)
+		GUI.F_LeyendaFiscal.txtLeyenda.Value(3)
+	F.Intrinsic.Control.EndIf
+	GUI.F_LeyendaFiscal.txtDispFisc.Text(V.ODBC.CONX!rstLoad.FieldValLTrim!DISPOSCION_FISCAL)
+	GUI.F_LeyendaFiscal.txtNorma.Text(V.ODBC.CONX!rstLoad.FieldValLTrim!NORMA)
+	GUI.F_LeyendaFiscal.txtLeyenda.Text(V.ODBC.CONX!rstLoad.FieldValLTrim!TEXTOLEYENDA)
+F.Intrinsic.Control.EndIf
+
+GUI.F_LeyendaFiscal..Show
+Program.Sub.F_LeyendaFiscal_Load.End
+
+''''''''''''''NODO TIPO RELACION'''''''''''
+Program.Sub.TipoRelacionLoad.Start
+v.Local.sSQL.Declare
+v.Local.iCount.Declare
+v.Local.sInvoice.Declare
+v.Local.sMessage.Declare
+V.Local.SFacRel.Declare
+v.Local.sUUID.Declare
+v.Local.sTipoRelCheck.Declare
+v.local.sTipoRelacion.Declare
+v.Local.sUUIDCheck.Declare
+V.Local.sInvoiceChecck.Declare
+
+F.Intrinsic.Control.If(v.DataTable.TipoRelacion_DT.Exists,=,True)
+	F.Data.DataView.Close("TipoRelacion_DT", "TipoRelacion_DV")
+	F.Data.DataTable.Close("TipoRelacion_DT")
+F.Intrinsic.Control.EndIf
+
+
+'Function.Intrinsic.Debug.InvokeDebugger
+'Function.Intrinsic.Debug.Stop
+
+'SELECT ALL INVOICES FROM PRT_LASER_INVOICE AND SET INTO A DATA TABLE
+F.Intrinsic.String.Build("select distinct INVOICE_NO from PRT_LASER_INVOICE where RPTID = '000055' AND TERMINAL_NO = '{0}'",v.global.sTerminal,v.Local.sSQL)
+F.Data.DataTable.CreateFromSQL("Invoices_DT", "CONX", v.Local.sSQL)
+F.Intrinsic.Control.For(v.Local.iCount,0,v.DataTable.Invoices_DT.RowCount--,1)
+	v.global.sInvoice.Set(v.DataTable.Invoices_DT(v.Local.iCount).INVOICE_NO!FieldValTrim)
+	
+	gui.F_TipoRelacion.txtInvoice.Text(v.global.sInvoice)
+	
+	f.Intrinsic.String.Build("SELECT DISTINCT SUBSTRING(HDR_USR_FLD_4,1,2) AS HDR_USR_FLD_4 FROM V_PRT_LASER_INVOICE WHERE RPTID = '000055' AND TERMINAL_NO = '{0}' AND INVOICE_NO = '{1}'",v.global.sTerminal,v.global.sInvoice,v.Local.sSQL)
+	F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Global.sTipoRelacion)
+	
+
+
+			
+
+
+	f.Intrinsic.Control.If(v.Global.sTipoRelacion,<>,"00")
+		
+		F.Intrinsic.String.Build("select COUNT(FACTURA) from CFDI_TIPORELACION where FACTURA = '{0}'",v.global.sInvoice,v.Local.sSQL)
+		F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSQL,V.Local.sTipoRelCheck)
+		
+		F.Intrinsic.Control.If(V.Local.sTipoRelCheck,=,0)
+'			Gui.F_TipoRelacion.GsGridTipoRelDash.Visible(True)
+		F.Intrinsic.Control.Else
+'			Gui.F_TipoRelacion.GsGridTipoRelDash.Visible(False)
+			F.Intrinsic.String.Build("select * from CFDI_TIPORELACION where FACTURA = '{0}'",v.global.sInvoice,v.Local.sSQL)
+			
+			F.Data.DataTable.CreateFromSQL("TipoRelacion_DT", "CONX", v.Local.sSQL,True)
+			F.Data.DataView.Create("TipoRelacion_DT", "TipoRelacion_DV", 22)
+			v.Global.sTipoRelacion.Set(v.DataTable.TipoRelacion_DT(v.Local.iCount).TIPO_RELACION!FieldValTrim)
+			
+			gui.F_TipoRelacion.GsGridTipoRelDash.AddGridviewFromDataview("TipoRelacion_GV", "TipoRelacion_DT", "TipoRelacion_DV")
+			gui.F_TipoRelacion.GsGridTipoRelDash.SetGridviewProperty("TipoRelacion_GV","AllowSort",True)
+			gui.F_TipoRelacion.GsGridTipoRelDash.SetGridViewProperty("TipoRelacion_GV","AllowFilter",True)
+			gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FACTURA", "Visible", False)
+			gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","TIPO_RELACION", "Visible", False)
+			gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FAC_REL", "Caption", "Factura Relacionada")
+			gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","UUID_REL", "Caption", "UUID Relacionada")
+			'gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FACTURA","HeaderBackColor","LightBlue")
+			'gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","TIPO_RELACION", "HeaderBackColor","LightBlue")
+			gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FAC_REL", "HeaderBackColor","LightBlue")
+			gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","UUID_REL", "HeaderBackColor","LightBlue")
+			'gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FACTURA", "HeaderHAlignment", "Center")
+			'gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","TIPO_RELACION", "HeaderHAlignment", "Center")
+			gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FAC_REL", "HeaderHAlignment", "Center")
+			gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","UUID_REL", "HeaderHAlignment", "Center")
+			gui.F_TipoRelacion.GsGridTipoRelDash.MainView("TipoRelacion_GV")
+					
+		F.Intrinsic.Control.EndIf
+	gui.F_TipoRelacion..Show	
+
+	f.Intrinsic.Control.EndIf
+'	f.Data.DataTable.Close("TipoRelacion_DT")
+F.Intrinsic.Control.Next(v.Local.iCount)
+f.Data.DataTable.Close("Invoices_DT")
+
+
+Program.Sub.TipoRelacionLoad.End
+
+Program.Sub.cmdTRelacionYes_Click.Start
+v.Local.sUUIDCheck.Declare
+v.Local.sFacRel.Declare
+v.Local.sUUID.Declare
+v.Local.sRet.Declare
+v.Local.sTemp.Declare
+v.Local.sTitles.Declare
+v.Local.iWidths.Declare(long)
+V.Local.sMessage.Declare
+v.Local.sSQL.Declare
+
+
+F.Intrinsic.Control.If(v.DataTable.TipoRelacion_NEW_DT.Exists,=,True)
+	F.Data.DataView.Close("TipoRelacion_NEW_DT", "TipoRelacion_NEW_DV")
+	F.Data.DataTable.Close("TipoRelacion_NEW_DT")
+F.Intrinsic.Control.EndIf
+
+
+'Load Custom Browser from Custom Table FACTURAS and save into form F_TipoRelacion
+F.Intrinsic.String.Split("INVOICE*!*FECHA_TIMBRE*!*UUID_CFDI","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("300*!*600*!*800","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("SELECIONA LA RELACION","conx","select INVOICE,FECHA_TIMBRE,UUID_CFDI from FACTURAS ORDER BY INVOICE",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+	
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	v.Local.sFacRel.Set(v.Local.sRet(0))
+	v.Local.sUUID.Set(v.Local.sRet(2))
+	
+
+	
+	f.Intrinsic.String.Build("select count(UUID_REL) from CFDI_TIPORELACION where factura = '{0}' and UUID_REL = '{1}'",v.Global.sInvoice,v.Local.sUUID,v.Local.sSQL)
+	F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.local.sUUIDCheck)
+	
+	F.Intrinsic.Control.If(v.local.sUUIDCheck,=,0)
+		F.Intrinsic.String.Build("INSERT INTO CFDI_TIPORELACION(FACTURA,TIPO_RELACION,FAC_REL,UUID_REL) VALUES ('{0}', '{1}','{2}','{3}')",V.Global.sInvoice,V.Global.sTipoRelacion,v.Local.SFacRel,v.Local.sUUID,v.Local.sSQL)
+		F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	
+'	f.Data.DataTable.AddRow("TipoRelacion_DT","FACTURA",v.Global.sInvoice,"TIPO_RELACION", V.Global.sTipoRelacion, "FAC_REL", v.Local.sFacRel, "UUID_REL", v.Local.sUUID)
+		F.Intrinsic.String.Build("select * from CFDI_TIPORELACION where FACTURA = '{0}'",v.global.sInvoice,v.Local.sSQL)
+		
+		F.Data.DataTable.CreateFromSQL("TipoRelacion_NEW_DT", "CONX", v.Local.sSQL,True)
+		F.Data.DataView.Create("TipoRelacion_NEW_DT", "TipoRelacion_NEW_DV", 22)
+		
+		gui.F_TipoRelacion.GsGridTipoRelDash.AddGridviewFromDataview("TipoRelacion_GV", "TipoRelacion_NEW_DT", "TipoRelacion_NEW_DV")
+		gui.F_TipoRelacion.GsGridTipoRelDash.SetGridviewProperty("TipoRelacion_GV","AllowSort",True)
+		gui.F_TipoRelacion.GsGridTipoRelDash.SetGridViewProperty("TipoRelacion_GV","AllowFilter",True)
+		gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FACTURA", "Visible", False)
+		gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","TIPO_RELACION", "Visible", False)
+		gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FAC_REL", "Caption", "Factura Relacionada")
+		gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","UUID_REL", "Caption", "UUID Relacionada")
+		'gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FACTURA","HeaderBackColor","LightBlue")
+		'gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","TIPO_RELACION", "HeaderBackColor","LightBlue")
+		gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FAC_REL", "HeaderBackColor","LightBlue")
+		gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","UUID_REL", "HeaderBackColor","LightBlue")
+		'gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FACTURA", "HeaderHAlignment", "Center")
+		'gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","TIPO_RELACION", "HeaderHAlignment", "Center")
+		gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FAC_REL", "HeaderHAlignment", "Center")
+		gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","UUID_REL", "HeaderHAlignment", "Center")
+		gui.F_TipoRelacion.GsGridTipoRelDash.MainView("TipoRelacion_GV")
+		
+		
+	F.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("Factura: {0} ya tiene relacion con Folio: {1}, favor de selecionar otro Folio",v.global.sInvoice,v.Local.sUUID,v.Local.sMessage)
+		f.Intrinsic.UI.Msgbox(v.Local.sMessage)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+			
+
+
+
+Program.Sub.cmdTRelacionYes_Click.End
+
+Program.Sub.cmdTRelacionNO_Click.Start
+f.Intrinsic.Control.CallSub(Unload)
+Program.Sub.cmdTRelacionNO_Click.End
+
+Program.Sub.cmdBorrarRel_Click.Start
+V.Local.sMessage.Declare
+v.Local.sUUIDCheck.Declare
+v.Local.sFacRel.Declare
+v.Local.sUUID.Declare
+v.Local.sRet.Declare
+v.Local.sTemp.Declare
+v.Local.sTitles.Declare
+v.Local.iWidths.Declare(long)
+v.Local.sSQL.Declare
+
+
+
+F.Intrinsic.Control.If(v.DataTable.TipoRelacion_DEL_DT.Exists,=,True)
+	F.Data.DataView.Close("TipoRelacion_DEL_DT", "TipoRelacion_DEL_DV")
+	F.Data.DataTable.Close("TipoRelacion_DEL_DT")
+F.Intrinsic.Control.EndIf
+
+
+'Load Custom Browser from Custom Table CFDI_TIPORELACION and DELETE IT
+F.Intrinsic.String.Split("FACTURA RELACIONADA*!*UUID RELACIONADO","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("900*!*900","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.String.Build("select FAC_REL,UUID_REL from CFDI_TIPORELACION WHERE FACTURA = '{0}'",V.Global.sInvoice,V.Local.sSQL)
+F.Intrinsic.UI.Browser("SELECIONA LA RELACION","conx",V.Local.sSQL,v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+	
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	v.Local.sFacRel.Set(v.Local.sRet(0))
+	F.Intrinsic.String.Build("DELETE FROM CFDI_TIPORELACION WHERE FACTURA = '{0}' AND FAC_REL = '{1}' ",V.Global.sInvoice,V.Local.sFacRel,v.Local.sSQL)
+	F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	
+	F.Intrinsic.String.Build("select * from CFDI_TIPORELACION where FACTURA = '{0}'",v.global.sInvoice,v.Local.sSQL)
+	
+	F.Data.DataTable.CreateFromSQL("TipoRelacion_DEL_DT", "CONX", v.Local.sSQL,True)
+	F.Data.DataView.Create("TipoRelacion_DEL_DT", "TipoRelacion_DEL_DV", 22)
+	
+	gui.F_TipoRelacion.GsGridTipoRelDash.AddGridviewFromDataview("TipoRelacion_GV", "TipoRelacion_DEL_DT", "TipoRelacion_DEL_DV")
+	gui.F_TipoRelacion.GsGridTipoRelDash.SetGridviewProperty("TipoRelacion_GV","AllowSort",True)
+	gui.F_TipoRelacion.GsGridTipoRelDash.SetGridViewProperty("TipoRelacion_GV","AllowFilter",True)
+	gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FACTURA", "Visible", False)
+	gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","TIPO_RELACION", "Visible", False)
+	gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FAC_REL", "Caption", "Factura Relacionada")
+	gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","UUID_REL", "Caption", "UUID Relacionada")
+	'gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FACTURA","HeaderBackColor","LightBlue")
+	'gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","TIPO_RELACION", "HeaderBackColor","LightBlue")
+	gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FAC_REL", "HeaderBackColor","LightBlue")
+	gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","UUID_REL", "HeaderBackColor","LightBlue")
+	'gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FACTURA", "HeaderHAlignment", "Center")
+	'gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","TIPO_RELACION", "HeaderHAlignment", "Center")
+	gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","FAC_REL", "HeaderHAlignment", "Center")
+	gui.F_TipoRelacion.GsGridTipoRelDash.SetColumnProperty("TipoRelacion_GV","UUID_REL", "HeaderHAlignment", "Center")
+	gui.F_TipoRelacion.GsGridTipoRelDash.MainView("TipoRelacion_GV")
+	
+		
+	F.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("Factura: {0} ya tiene relacion con Folio: {1}, favor de selecionar otro Folio",v.global.sInvoice,v.Local.sUUID,v.Local.sMessage)
+		f.Intrinsic.UI.Msgbox(v.Local.sMessage)
+	
+F.Intrinsic.Control.EndIf
+			
+
+Program.Sub.cmdBorrarRel_Click.End
+
+''''''FACTURACION ELECTRONICA DASHBOARD''''''
+Program.Sub.FacturacionDashboardLoad.Start
+''''''FACTURAS TIMBRADAS DASHBOARD''''''
+
+f.Data.DataTable.CreateFromSQL("FACTURACION_DT","CONX","select * from FACTURAS ",True)
+f.Data.DataView.Create("FACTURACION_DT", "FACTURACION_DV", 22)
+Gui.F_FacturasDash.GsGridFacturas.AddGridviewFromDataview("FACTURACION_GV", "FACTURACION_DT", "FACTURACION_DV")
+
+
+'Set Properties
+GUI.F_FacturasDash.GsGridFacturas.SetGridviewProperty("FACTURACION_GV","AllowSort",True)
+GUI.F_FacturasDash.GsGridFacturas.SetGridViewProperty("FACTURACION_GV","AllowFilter",True)
+GUI.F_FacturasDash.GsGridFacturas.SetGridViewProperty("FACTURACION_GV","OptionsDetailShowDetailTabs",False)
+GUI.F_FacturasDash.GsGridFacturas.SetGridViewProperty("FACTURACION_GV","OptionsViewShowGroupPanel",True)
+GUI.F_FacturasDash.GsGridFacturas.SetGridViewProperty("FACTURACION_GV","EnableAppearanceOddRow",True)
+
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","INVOICE", "Caption", "FACTURA")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","XML_URL", "Caption", "UBICACION XML")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","PDF_URL", "Caption", "UBICACION PDF")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","FECHA_TIMBRE", "Caption", "FECHA TIMBRE")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","UUID_CFDI", "Caption", "UUID CFDI")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","RAZON_SOCIAL", "Caption", "RAZON SOCIAL")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","CODIGO_POSTAL", "Caption", "CODIGO_POSTAL")
+
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","INVOICE","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","XML_URL","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","PDF_URL","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","FECHA_TIMBRE", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","UUID_CFDI","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","IVA","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","SUBTOTAL","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","TOTAL","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","RFC","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","RAZON_SOCIAL","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","CODIGO_POSTAL", "HeaderBackColor","LightBlue")
+
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","INVOICE", "MinWidth",100)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","XML_URL", "MinWidth",300)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","PDF_URL","MinWidth",300)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","FECHA_TIMBRE", "MinWidth",150)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","UUID_CFDI", "MinWidth",200)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","IVA", "MinWidth",80)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","SUBTOTAL", "MinWidth",80)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","TOTAL", "MinWidth",80)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","RFC", "MinWidth",100)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","RAZON_SOCIAL", "MinWidth",200)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","CODIGO_POSTAL", "MinWidth",80)
+
+
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","INVOICE", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","XML_URL", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","PDF_URL","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","FECHA_TIMBRE", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","UUID_CFDI", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","IVA","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","SUBTOTAL","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","TOTAL","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","RFC","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","RAZON_SOCIAL","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","CODIGO_POSTAL", "HeaderHAlignment", "Center")
+
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","INVOICE", "ReadOnly", True)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","XML_URL", "ReadOnly", True)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","PDF_URL", "ReadOnly", True)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","FECHA_TIMBRE", "ReadOnly", True)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","UUID_CFDI", "ReadOnly", True)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","IVA", "ReadOnly", True)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","SUBTOTAL", "ReadOnly", True)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","TOTAL", "ReadOnly", True)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","RFC", "ReadOnly", True)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","RAZON_SOCIAL", "ReadOnly", True)
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","CODIGO_POSTAL", "ReadOnly", True)
+
+
+'GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","INVOICE", "VisibleIndex","0")
+'GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","UUID_CFDI", "VisibleIndex","1")
+'GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","XML_URL", "VisibleIndex","3")
+'GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","PDF_URL", "VisibleIndex","2")
+
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","INVOICE", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","IVA","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","SUBTOTAL","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","TOTAL","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","RAZON_SOCIAL","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridFacturas.SetColumnProperty("FACTURACION_GV","CODIGO_POSTAL", "CellHAlignment", "Center")
+
+GUI.F_FacturasDash.GsGridFacturas.MainView("FACTURACION_GV")
+Gui.F_FacturasDash.GsGridFacturas.Anchor(15)
+
+''''''DATOS FACTURA''''''
+f.Data.DataTable.CreateFromSQL("DATOS_FACTURA_DT","CONX","SELECT INVOICE, CUSTOMER, NAME_CUSTOMER, ADDRESS1, ADDRESS2, ADDRESS3, ADDRESS4, ADDRESS5, CITY, STATE, ZIP, COUNTRY, ATTENTION, USER_1, USER_2, USER_3, USER_4 FROM V_ORDER_HIST_HEAD",True)
+f.Data.DataView.Create("DATOS_FACTURA_DT", "DATOS_FACTURA_DV", 22)
+Gui.F_FacturasDash.GsGridDFACT.AddGridviewFromDataview("DATOS_FACTURA_GV", "DATOS_FACTURA_DT", "DATOS_FACTURA_DV")
+
+
+'Set Properties
+GUI.F_FacturasDash.GsGridDFACT.SetGridviewProperty("DATOS_FACTURA_GV","AllowSort",True)
+GUI.F_FacturasDash.GsGridDFACT.SetGridViewProperty("DATOS_FACTURA_GV","AllowFilter",True)
+GUI.F_FacturasDash.GsGridDFACT.SetGridViewProperty("DATOS_FACTURA_GV","OptionsDetailShowDetailTabs",False)
+GUI.F_FacturasDash.GsGridDFACT.SetGridViewProperty("DATOS_FACTURA_GV","OptionsViewShowGroupPanel",True)
+GUI.F_FacturasDash.GsGridDFACT.SetGridViewProperty("DATOS_FACTURA_GV","EnableAppearanceOddRow",True)
+
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","INVOICE", "Caption", "FACTURA")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","CUSTOMER", "Caption", "CLIENTE")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","NAME_CUSTOMER", "Caption", "NOMBRE 1")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS1", "Caption", "NOMBRE 2")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS2", "Caption", "NOMBRE 3")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS3", "Caption", "CALLE/NO")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS4", "Caption", "COLONIA")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS5", "Caption", "CIUDAD Y ESTADO")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","CITY", "Caption", "N/A")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","STATE", "Caption", "N/A")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ZIP", "Caption", "CODIGO POSTAL")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","COUNTRY","Caption", "PAIS")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ATTENTION", "Caption", "RFC")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_1", "Caption", "METODO DE PAGO")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_2", "Caption", "FORMA DE PAGO")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_3", "Caption", "USO DE CFDI")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_4", "Caption", "TIPO RELACION")
+
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","INVOICE","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","CUSTOMER","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","NAME_CUSTOMER", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS1","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS2", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS3", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS4", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS5", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","CITY", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","STATE", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ZIP", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","COUNTRY", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ATTENTION", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_1", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_2", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_3", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_4", "HeaderBackColor","LightBlue")
+
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","INVOICE","MinWidth",80)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","CUSTOMER","MinWidth",80)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","NAME_CUSTOMER", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS1","MinWidth",300)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS2", "MinWidth",300)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS3", "MinWidth",300)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS4", "MinWidth",300)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS5", "MinWidth",300)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","CITY", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","STATE", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ZIP", "MinWidth",80)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","COUNTRY", "MinWidth",80)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ATTENTION", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_1", "MinWidth",200)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_2", "MinWidth",200)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_3", "MinWidth",200)
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_4", "MinWidth",200)
+
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","INVOICE","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","CUSTOMER","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","NAME_CUSTOMER", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS1","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS2", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS3", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS4", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS5", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","CITY", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","STATE", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ZIP", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","COUNTRY", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ATTENTION", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_1", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_2", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_3", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_4", "HeaderHAlignment", "Center")
+
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","INVOICE","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","CUSTOMER","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","NAME_CUSTOMER", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS1","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS2", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS3", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS4", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ADDRESS5", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","CITY", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","STATE", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ZIP", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","COUNTRY", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","ATTENTION", "CellHAlignment", "Center")
+'GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_1", "CellHAlignment", "Center")
+'GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_2", "CellHAlignment", "Center")
+'GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_3", "CellHAlignment", "Center")
+'GUI.F_FacturasDash.GsGridDFACT.SetColumnProperty("DATOS_FACTURA_GV","USER_4", "CellHAlignment", "Center")
+
+GUI.F_FacturasDash.GsGridDFACT.MainView("DATOS_FACTURA_GV")
+Gui.F_FacturasDash.GsGridDFACT.Anchor(15)
+''''''DATOS COMPLEMENTO EXTERIOR''''
+f.Data.DataTable.CreateFromSQL("DATOS_COMEXT_DT","CONX","select * from CFDI_COMEXT_OE_SO", 22)
+f.Data.DataView.Create("DATOS_COMEXT_DT", "DATOS_COMEXT_DV", 22)
+Gui.F_FacturasDash.GsGridDCOMEXT.AddGridviewFromDataview("DATOS_COMEXT_GV", "DATOS_COMEXT_DT", "DATOS_COMEXT_DV")
+
+
+'Set Properties
+GUI.F_FacturasDash.GsGridDCOMEXT.SetGridviewProperty("DATOS_COMEXT_GV","AllowSort",True)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetGridViewProperty("DATOS_COMEXT_GV","AllowFilter",True)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetGridViewProperty("DATOS_COMEXT_GV","OptionsDetailShowDetailTabs",False)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetGridViewProperty("DATOS_COMEXT_GV","OptionsViewShowGroupPanel",True)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetGridViewProperty("DATOS_COMEXT_GV","EnableAppearanceOddRow",True)
+
+
+
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","ORDER_NO", "Caption", "ORDEN")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","MOTIVO_TRASLADO", "Caption", "MOTIVO TRASLADO")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","TIPO_OPERACION", "Caption", "TIPO DE OPERACION")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CLAVE_PEDIMENTO", "Caption", "CLAVE PEDIMENTO")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CERTDEORIGEN", "Caption", "CERTIFICADO DE ORIGEN")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","NO_CERTDEORIGEN", "Caption", "NO. CERTIFICADO DE ORIGEN")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","INCOTERM", "Caption", "INCOTERM")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","NO_EXP_CON_UN_EU", "Caption", "NO_EXP_CON_UN_EU")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","SUBDIVISION", "Caption", "SUBDIVISION")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","OBSERVACIONES", "Caption", "OBSERVACIONES")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","P_TAX_ID", "Caption", "P_TAX_ID")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","P_RES_FISCAL", "Caption", "P_RES_FISCAL")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","VAL_UNIT_ADUANA", "Caption", "VALOR UNITARIO ADUANA")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CANTIDAD_ADUANA", "Caption", "CANTIDAD ADUANA")
+
+
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","ORDER_NO", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","MOTIVO_TRASLADO","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","TIPO_OPERACION", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CLAVE_PEDIMENTO", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CERTDEORIGEN","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","NO_CERTDEORIGEN", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","INCOTERM", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","NO_EXP_CON_UN_EU", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","SUBDIVISION", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","OBSERVACIONES", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","P_TAX_ID", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","P_RES_FISCAL", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","VAL_UNIT_ADUANA", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CANTIDAD_ADUANA", "HeaderBackColor","LightBlue")
+
+
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","ORDER_NO","MinWidth",80)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","MOTIVO_TRASLADO","MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","TIPO_OPERACION","MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CLAVE_PEDIMENTO","MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CERTDEORIGEN","MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","NO_CERTDEORIGEN", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","INCOTERM", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","NO_EXP_CON_UN_EU", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","SUBDIVISION", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","OBSERVACIONES", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","P_TAX_ID", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","P_RES_FISCAL", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","VAL_UNIT_ADUANA", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CANTIDAD_ADUANA", "MinWidth",100)
+
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","ORDER_NO","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","MOTIVO_TRASLADO","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","TIPO_OPERACION","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CLAVE_PEDIMENTO","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CERTDEORIGEN","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","NO_CERTDEORIGEN", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","INCOTERM", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","NO_EXP_CON_UN_EU", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","SUBDIVISION", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","OBSERVACIONES", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","P_TAX_ID", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","P_RES_FISCAL", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","VAL_UNIT_ADUANA", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CANTIDAD_ADUANA", "HeaderHAlignment", "Center")
+
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","ORDER_NO","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","MOTIVO_TRASLADO","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","TIPO_OPERACION","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CLAVE_PEDIMENTO","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CERTDEORIGEN","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","NO_CERTDEORIGEN", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","INCOTERM", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","NO_EXP_CON_UN_EU", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","SUBDIVISION", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","OBSERVACIONES", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","P_TAX_ID", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","P_RES_FISCAL", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","VAL_UNIT_ADUANA", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMEXT.SetColumnProperty("DATOS_COMEXT_GV","CANTIDAD_ADUANA", "CellHAlignment", "Center")
+
+GUI.F_FacturasDash.GsGridDCOMEXT.MainView("DATOS_COMEXT_GV")
+Gui.F_FacturasDash.GsGridDCOMEXT.Anchor(15)
+''''''DATOS COMPLEMENTO DE PAGOS''''
+f.Data.DataTable.CreateFromSQL("DATOS_COMPAGOS_DT","CONX","select * from CFDI_COMPAGOS_PAGO", 22)
+f.Data.DataView.Create("DATOS_COMPAGOS_DT", "DATOS_COMPAGOS_DV", 22)
+Gui.F_FacturasDash.GsGridDCOMPAGOS.AddGridviewFromDataview("DATOS_COMPAGOS_GV", "DATOS_COMPAGOS_DT", "DATOS_COMPAGOS_DV")
+
+
+'Set Properties
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetGridviewProperty("DATOS_COMPAGOS_GV","AllowSort",True)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetGridViewProperty("DATOS_COMPAGOS_GV","AllowFilter",True)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetGridViewProperty("DATOS_COMPAGOS_GV","OptionsDetailShowDetailTabs",False)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetGridViewProperty("DATOS_COMPAGOS_GV","OptionsViewShowGroupPanel",True)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetGridViewProperty("DATOS_COMPAGOS_GV","EnableAppearanceOddRow",True)
+
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","INTERNACIONAL", "VISIBLE", FALSE)
+
+
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","ID_PAGOS", "Caption", "ID PAGOS")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","FECHAPAGO", "Caption", "FECHA DE PAGO")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","FORMADEPAGOP", "Caption", "FORMA DE PAGO")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","MONEDAP", "Caption", "MONEDA")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","TIPOCAMBIOP", "Caption", "TIPO DE CAMBIO")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","MONTO", "Caption", "MONTO")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","NUMOPERACION", "Caption", "NO OPERACION")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","RFCEMISORCTAORD", "Caption", "RFC EMISOR CTA ORDENANTE")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","NOMBANCOORDEXT", "Caption", "NOM BANCO ORDENANTE")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CTAORDENANTE", "Caption", "CTA ORDENANTE")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","RFCEMISORCTABEN", "Caption", "RFC EMISOR CTA BEN")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CTEBENEFICIARIO", "Caption", "CTE BENEFICIARIO")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CADPAGO", "Caption", "CAD PAGO")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","TIMBRAR", "Caption", "FACTURA TIMBRADA")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","XML_URL", "Caption", "XML_URL")
+
+
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","ID_PAGOS", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","FECHAPAGO", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","FORMADEPAGOP","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","MONEDAP", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","TIPOCAMBIOP", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","MONTO", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","NUMOPERACION", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","RFCEMISORCTAORD", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","NOMBANCOORDEXT", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CTAORDENANTE", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","RFCEMISORCTABEN", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CTEBENEFICIARIO","HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CADPAGO", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","TIMBRAR", "HeaderBackColor","LightBlue")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","XML_URL", "HeaderBackColor","LightBlue")
+
+
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","ID_PAGOS", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","FECHAPAGO", "MinWidth",100)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","FORMADEPAGOP","MinWidth",80)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","MONEDAP", "MinWidth",80)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","TIPOCAMBIOP", "MinWidth",80)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","MONTO", "MinWidth",80)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","NUMOPERACION", "MinWidth",80)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","RFCEMISORCTAORD", "MinWidth",80)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","NOMBANCOORDEXT", "MinWidth",80)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CTAORDENANTE", "MinWidth",80)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","RFCEMISORCTABEN", "MinWidth",80)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CTEBENEFICIARIO","MinWidth",80)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CADPAGO", "MinWidth",80)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","TIMBRAR", "MinWidth",80)
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","XML_URL", "MinWidth",300)
+
+
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","ID_PAGOS", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","FECHAPAGO", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","FORMADEPAGOP","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","MONEDAP", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","TIPOCAMBIOP", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","MONTO", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","NUMOPERACION", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","RFCEMISORCTAORD", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","NOMBANCOORDEXT", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CTAORDENANTE", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","RFCEMISORCTABEN", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CTEBENEFICIARIO","HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CADPAGO", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","TIMBRAR", "HeaderHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","XML_URL", "HeaderHAlignment", "Center")
+
+
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","ID_PAGOS", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","FECHAPAGO", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","FORMADEPAGOP","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","MONEDAP", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","TIPOCAMBIOP", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","MONTO", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","NUMOPERACION", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","RFCEMISORCTAORD", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","NOMBANCOORDEXT", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CTAORDENANTE", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","RFCEMISORCTABEN", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CTEBENEFICIARIO","CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","CADPAGO", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","TIMBRAR", "CellHAlignment", "Center")
+GUI.F_FacturasDash.GsGridDCOMPAGOS.SetColumnProperty("DATOS_COMPAGOS_GV","XML_URL", "CellHAlignment", "Center")
+
+
+GUI.F_FacturasDash.GsGridDCOMPAGOS.MainView("DATOS_COMPAGOS_GV")
+Gui.F_FacturasDash.GsGridDCOMPAGOS.Anchor(15)
+
+Gui.F_FacturasDash.tabCFDI.Anchor(15)
+'GUI.F_FacturasDash.cmdReload.Anchor(15)
+GUI.F_FacturasDash..Show
+Program.Sub.FacturacionDashboardLoad.End
+
+Program.Sub.GsGridFacturas_RowCellClick.Start
+V.Local.sFile.Declare
+V.Local.sRet.Declare
+V.Local.sSQL.Declare
+v.Local.sUNC.Declare
+v.Local.sFileXML.Declare
+v.Local.sFileURL.Declare
+
+'Function.Intrinsic.Debug.InvokeDebugger
+'Function.Intrinsic.Debug.Stop
+
+
+F.ODBC.Connection!conx.ExecuteAndReturn("SELECT RTRIM(UNC_PATH) FROM GAB_5013_CFDI_URL",v.Local.sUNC)
+
+'F.Intrinsic.File.MakeFilenameFriendly(v.Local.sUNC,v.Local.sUNC)
+
+F.Intrinsic.Control.If(V.Args.Column,=,"XML_URL")
+	v.Local.sFile.Set(v.DataTable.FACTURACION_DT(v.Args.RowIndex).XML_URL!FieldValTrim)
+	f.Intrinsic.String.Build("{0}{1}",v.Local.sUNC,v.Local.sFile,v.Local.sFileXML)
+	f.Intrinsic.Task.ShellExec(-1,"Open",v.Local.sFileXML,"*.xml|*.xml","",1)
+
+f.Intrinsic.Control.ElseIf(V.Args.Column,=,"PDF_URL")
+	v.Local.sFile.Set(v.DataTable.FACTURACION_DT(v.Args.RowIndex).PDF_URL!FieldValTrim)
+	f.Intrinsic.String.Build("{0}{1}",v.Local.sUNC,v.Local.sFile,v.Local.sFileURL)
+	f.Intrinsic.Task.ShellExec(-1,"Open",v.Local.sFileURL,"*.pdf|*.pdf","",1)
+
+
+F.Intrinsic.Control.EndIf
+
+Program.Sub.GsGridFacturas_RowCellClick.End
+
+Program.Sub.cmdReload_Click.Start
+f.Intrinsic.Control.If(v.DataTable.FACTURACION_DT.Exists,=,true)
+	f.Data.DataView.Close("FACTURACION_DT", "FACTURACION_DV")
+	f.Data.DataTable.Close("FACTURACION_DT")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.DataTable.DATOS_FACTURA_DT.Exists,=,true)
+	f.Data.DataView.Close("DATOS_FACTURA_DT", "DATOS_FACTURA_DV")
+	f.Data.DataTable.Close("DATOS_FACTURA_DT")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.DataTable.DATOS_COMEXT_DT.Exists,=,true)
+	f.Data.DataView.Close("DATOS_COMEXT_DT", "DATOS_COMEXT_DV")
+	f.Data.DataTable.Close("DATOS_COMEXT_DT")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.DataTable.DATOS_COMPAGOS_DT.Exists,=,true)
+	f.Data.DataView.Close("DATOS_COMPAGOS_DT", "DATOS_COMPAGOS_DV")
+	f.Data.DataTable.Close("DATOS_COMPAGOS_DT")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.CallSub(FacturacionDashboardLoad)
+Program.Sub.cmdReload_Click.End
+
+''''''PRETIMBRADO DASHBOARD''''''''''''
+Program.Sub.TEKNIKDashboardLoad.Start
+'''''''''''''TAB CFDI'''''''''''''''''
+f.Data.DataTable.CreateFromSQL("TK_CFDI_DT","CONX","select * from V_TK_CFDI",True)
+f.Data.DataView.Create("TK_CFDI_DT", "TK_CFDI_DV", 22)
+GUI.F_TeknikPreFactura.GsGridCFDI.AddGridviewFromDataview("TK_CFDI_GV", "TK_CFDI_DT", "TK_CFDI_DV")
+
+GUI.F_TeknikPreFactura.GsGridCFDI.SetGridviewProperty("TK_CFDI_GV","AllowSort",True)
+GUI.F_TeknikPreFactura.GsGridCFDI.SetGridviewProperty("TK_CFDI_GV","AllowFilter",True)
+GUI.F_TeknikPreFactura.GsGridCFDI.SetGridviewProperty("TK_CFDI_GV","OptionsDetailShowDetailTabs",False)
+GUI.F_TeknikPreFactura.GsGridCFDI.SetGridviewProperty("TK_CFDI_GV","OptionsViewShowGroupPanel",True)
+GUI.F_TeknikPreFactura.GsGridCFDI.SetGridviewProperty("TK_CFDI_GV","EnableAppearanceOddRow",True)
+
+GUI.F_TeknikPreFactura.GsGridCFDI.MainView("TK_CFDI_GV")
+GUI.F_TeknikPreFactura.GsGridCFDI.Anchor(15)
+
+'''''''''''''TAB CFDI_ANEX'''''''''''''''''
+f.Data.DataTable.CreateFromSQL("TK_CFDI_ANEX_DT","CONX","select * from V_TK_CFDI_ANEX",True)
+f.Data.DataView.Create("TK_CFDI_ANEX_DT", "TK_CFDI_ANEX_DV", 22)
+GUI.F_TeknikPreFactura.GsGridANEXO.AddGridviewFromDataview("TK_CFDI_ANEX_GV", "TK_CFDI_ANEX_DT", "TK_CFDI_ANEX_DV")
+
+GUI.F_TeknikPreFactura.GsGridANEXO.SetGridviewProperty("TK_CFDI_ANEX_GV","AllowSort",True)
+GUI.F_TeknikPreFactura.GsGridANEXO.SetGridviewProperty("TK_CFDI_ANEX_GV","AllowFilter",True)
+GUI.F_TeknikPreFactura.GsGridANEXO.SetGridviewProperty("TK_CFDI_ANEX_GV","OptionsDetailShowDetailTabs",False)
+GUI.F_TeknikPreFactura.GsGridANEXO.SetGridviewProperty("TK_CFDI_ANEX_GV","OptionsViewShowGroupPanel",True)
+GUI.F_TeknikPreFactura.GsGridANEXO.SetGridviewProperty("TK_CFDI_ANEX_GV","EnableAppearanceOddRow",True)
+GUI.F_TeknikPreFactura.GsGridANEXO.MainView("TK_CFDI_ANEX_GV")
+GUI.F_TeknikPreFactura.GsGridANEXO.Anchor(15)
+
+'''''''''''''TAB CFDI_CONC'''''''''''''''''
+f.Data.DataTable.CreateFromSQL("TK_CFDI_CONC_DT","CONX","select * from V_TK_CFDI_CONC",True)
+f.Data.DataView.Create("TK_CFDI_CONC_DT", "TK_CFDI_CONC_DV", 22)
+GUI.F_TeknikPreFactura.GsGridCONC.AddGridviewFromDataview("TK_CFDI_CONC_GV", "TK_CFDI_CONC_DT", "TK_CFDI_CONC_DV")
+
+GUI.F_TeknikPreFactura.GsGridCONC.SetGridviewProperty("TK_CFDI_CONC_GV","AllowSort",True)
+GUI.F_TeknikPreFactura.GsGridCONC.SetGridviewProperty("TK_CFDI_CONC_GV","AllowFilter",True)
+GUI.F_TeknikPreFactura.GsGridCONC.SetGridviewProperty("TK_CFDI_CONC_GV","OptionsDetailShowDetailTabs",False)
+GUI.F_TeknikPreFactura.GsGridCONC.SetGridviewProperty("TK_CFDI_CONC_GV","OptionsViewShowGroupPanel",True)
+GUI.F_TeknikPreFactura.GsGridCONC.SetGridviewProperty("TK_CFDI_CONC_GV","EnableAppearanceOddRow",True)
+GUI.F_TeknikPreFactura.GsGridCONC.MainView("TK_CFDI_CONC_GV")
+GUI.F_TeknikPreFactura.GsGridCONC.Anchor(15)
+
+
+'''''''''''''TAB CFDI_EXTE'''''''''''''''''
+f.Data.DataTable.CreateFromSQL("TK_CFDI_EXTE_DT","CONX","select * from V_TK_CFDI_EXTE",True)
+f.Data.DataView.Create("TK_CFDI_EXTE_DT", "TK_CFDI_EXTE_DV", 22)
+GUI.F_TeknikPreFactura.GsGridEXTE.AddGridviewFromDataview("TK_CFDI_EXTE_GV", "TK_CFDI_EXTE_DT", "TK_CFDI_EXTE_DV")
+
+GUI.F_TeknikPreFactura.GsGridEXTE.SetGridviewProperty("TK_CFDI_EXTE_GV","AllowSort",True)
+GUI.F_TeknikPreFactura.GsGridEXTE.SetGridviewProperty("TK_CFDI_EXTE_GV","AllowFilter",True)
+GUI.F_TeknikPreFactura.GsGridEXTE.SetGridviewProperty("TK_CFDI_EXTE_GV","OptionsDetailShowDetailTabs",False)
+GUI.F_TeknikPreFactura.GsGridEXTE.SetGridviewProperty("TK_CFDI_EXTE_GV","OptionsViewShowGroupPanel",True)
+GUI.F_TeknikPreFactura.GsGridEXTE.SetGridviewProperty("TK_CFDI_EXTE_GV","EnableAppearanceOddRow",True)
+GUI.F_TeknikPreFactura.GsGridEXTE.MainView("TK_CFDI_EXTE_GV")
+GUI.F_TeknikPreFactura.GsGridEXTE.Anchor(15)
+
+'''''''''''''TAB CFDI_MERC'''''''''''''''''
+f.Data.DataTable.CreateFromSQL("TK_CFDI_MERC_DT","CONX","select * from V_TK_CFDI_MERC",True)
+f.Data.DataView.Create("TK_CFDI_MERC_DT", "TK_CFDI_MERC_DV", 22)
+GUI.F_TeknikPreFactura.GsGridEXTE.AddGridviewFromDataview("TK_CFDI_MERC_GV", "TK_CFDI_MERC_DT", "TK_CFDI_MERC_DV")
+
+GUI.F_TeknikPreFactura.GsGridEXTE.SetGridviewProperty("TK_CFDI_MERC_GV","AllowSort",True)
+GUI.F_TeknikPreFactura.GsGridEXTE.SetGridviewProperty("TK_CFDI_MERC_GV","AllowFilter",True)
+GUI.F_TeknikPreFactura.GsGridEXTE.SetGridviewProperty("TK_CFDI_MERC_GV","OptionsDetailShowDetailTabs",False)
+GUI.F_TeknikPreFactura.GsGridEXTE.SetGridviewProperty("TK_CFDI_MERC_GV","OptionsViewShowGroupPanel",True)
+GUI.F_TeknikPreFactura.GsGridEXTE.SetGridviewProperty("TK_CFDI_MERC_GV","EnableAppearanceOddRow",True)
+GUI.F_TeknikPreFactura.GsGridEXTE.MainView("TK_CFDI_MERC_GV")
+GUI.F_TeknikPreFactura.GsGridEXTE.Anchor(15)
+
+
+'''''''''''''''''''''''''''''
+GUI.F_TeknikPreFactura.cmdReload.Anchor(15)
+GUI.F_TeknikPreFactura..Show
+
+Program.Sub.TEKNIKDashboardLoad.End
+
+Program.Sub.F_TeknikPreFactura_UnLoad.Start
+f.Data.DataView.Close("TK_CFDI_DT", "TK_CFDI_DV")
+f.Data.DataTable.Close("TK_CFDI_DT")
+f.Data.DataView.Close("TK_CFDI_ANEX_DT", "TK_CFDI_ANEX_DV")
+f.Data.DataTable.Close("TK_CFDI_ANEX_DT")
+f.Data.DataView.Close("TK_CFDI_CONC_DT", "TK_CFDI_CONC_DV")
+f.Data.DataTable.Close("TK_CFDI_CONC_DT")
+f.Data.DataView.Close("TK_CFDI_EXTE_DT", "TK_CFDI_EXTE_DV")
+f.Data.DataTable.Close("TK_CFDI_EXTE_DT")
+f.Data.DataView.Close("TK_CFDI_MERC_DT", "TK_CFDI_MERC_DV")
+f.Data.DataTable.Close("TK_CFDI_MERC_DT")
+F.ODBC.Connection!Conx.Close
+F.Intrinsic.Control.End
+
+Program.Sub.F_TeknikPreFactura_UnLoad.End
+
+Program.Sub.cmdReloadTeknik_Click.Start
+f.Intrinsic.Control.If(v.DataTable.TK_CFDI_DT.Exists,=,true)
+	f.Data.DataView.Close("TK_CFDI_DT", "TK_CFDI_DV")
+	f.Data.DataTable.Close("TK_CFDI_DT")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.DataTable.TK_CFDI_ANEX_DT.Exists,=,true)
+	f.Data.DataView.Close("TK_CFDI_ANEX_DT", "TK_CFDI_ANEX_DV")
+	f.Data.DataTable.Close("TK_CFDI_ANEX_DT")
+f.Intrinsic.Control.EndIf
+
+
+f.Intrinsic.Control.If(v.DataTable.TK_CFDI_CONC_DT.Exists,=,true)
+	f.Data.DataView.Close("TK_CFDI_CONC_DT", "TK_CFDI_CONC_DV")
+	f.Data.DataTable.Close("TK_CFDI_CONC_DT")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.DataTable.TK_CFDI_EXTE_DT.Exists,=,true)
+	f.Data.DataView.Close("TK_CFDI_EXTE_DT", "TK_CFDI_EXTE_DV")
+	f.Data.DataTable.Close("TK_CFDI_EXTE_DT")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.DataTable.TK_CFDI_MERC_DT.Exists,=,true)
+	f.Data.DataView.Close("TK_CFDI_MERC_DT", "TK_CFDI_MERC_DV")
+	f.Data.DataTable.Close("TK_CFDI_MERC_DT")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.CallSub(TEKNIKDashboardLoad)
+Program.Sub.cmdReloadTeknik_Click.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+Program.Sub.Comments.End
